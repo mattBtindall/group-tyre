@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1013px" height="392px" viewBox="0 0 1013 392" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gt_resources-copy-2" transform="translate(-177.000000, -314.000000)">
+            <g id="Group-2" transform="translate(176.000000, 312.000000)">
+                <circle id="Oval-Copy-4" fill="#E93323" cx="565" cy="23" r="8"></circle>
+                <circle id="Oval-Copy" fill="#E93323" cx="381" cy="344" r="8"></circle>
+                <circle id="Oval-Copy-2" fill="#E93323" cx="335" cy="261" r="8"></circle>
+                <circle id="Oval-Copy-3" fill="#E93323" cx="460" cy="10" r="8"></circle>
+                <text id="Homologation-Code" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="819" y="20">Homologation Code</tspan>
+                </text>
+                <text id="Extra-Load-Indicator" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="39" y="311">Extra Load Indicator</tspan>
+                </text>
+                <text id="Valve/TPMS" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="96" y="388">Valve/TPMS</tspan>
+                </text>
+                <text id="Stopping-Distances" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="46" y="80">Stopping Distances</tspan>
+                </text>
+                <text id="Usage" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="151" y="157">Usage</tspan>
+                </text>
+                <text id="Balance-and-Alignmen" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="0" y="234">Balance and Alignment</tspan>
+                </text>
+                <circle id="Oval" stroke="#383838" cx="551" cy="246" r="147"></circle>
+                <g id="Group" transform="translate(550.500000, 245.500000) rotate(-180.000000) translate(-550.500000, -245.500000) translate(428.000000, 123.000000)"></g>
+                <text id="Tread-Depth" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="902" y="282">Tread Depth</tspan>
+                </text>
+                <text id="Load-Index" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="889" y="142">Load Index</tspan>
+                </text>
+                <text id="Tyre-Size" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="848" y="72">Tyre Size</tspan>
+                </text>
+                <text id="Speed-Rating" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="897" y="212">Speed Rating</tspan>
+                </text>
+                <text id="Contact-Patch" font-family="Lato-Bold, Lato" font-size="20" font-weight="bold" line-spacing="20" fill="#FFFFFF">
+                    <tspan x="887" y="361">Contact Patch</tspan>
+                </text>
+                <circle id="Oval-Copy-7" fill="#E93323" cx="695" cy="102" r="8"></circle>
+                <circle id="Oval-Copy-11" fill="#E93323" cx="675" cy="70" r="8"></circle>
+                <circle id="Oval-Copy-8" fill="#E93323" cx="721" cy="142" r="8"></circle>
+                <polyline id="Path" stroke="#E93323" stroke-width="2" points="239 76 293.08583 10 460 10"></polyline>
+                <polyline id="Path-Copy-5" stroke="#E93323" stroke-width="2" points="221 153 252 172.975774 351 172.975774"></polyline>
+                <polyline id="Path-2" stroke="#E93323" stroke-width="2" points="221 225 243 212 514 212"></polyline>
+                <polyline id="Path-3" stroke="#E93323" stroke-width="2" points="235 301 267.566204 261.005422 334.566204 261.005422"></polyline>
+                <polyline id="Path-4" stroke="#E93323" stroke-width="2" points="227 381 350.150177 381 381 344"></polyline>
+                <polyline id="Path-5" stroke="#E93323" stroke-width="2" points="800.054763 10 589 10 565 23"></polyline>
+                <polyline id="Path-9" stroke="#E93323" stroke-width="2" points="879.109525 132 848.422963 103 695 103"></polyline>
+                <polyline id="Path-9-Copy" stroke="#E93323" stroke-width="2" points="832 62 692.474871 62 676.905041 70.4906748"></polyline>
+                <polyline id="Path-10" stroke="#E93323" stroke-width="2" points="879.109525 203.951548 823.451322 203.951548 721 142"></polyline>
+                <path d="M879.109525,272 C877.776192,272 795.40635,271 632,269 L581,212" id="Path-11" stroke="#E93323" stroke-width="2"></path>
+                <polyline id="Path-12" stroke="#E93323" stroke-width="2" points="550 331 848.625673 331 879.109525 352"></polyline>
+                <circle id="Oval-Copy-9" fill="#E93323" cx="550" cy="331" r="8"></circle>
+                <circle id="Oval-Copy-10" fill="#E93323" cx="581" cy="212" r="8"></circle>
+                <path d="" id="Path-6" stroke="#979797"></path>
+                <circle id="Oval-Copy-5" fill="#E93323" cx="514" cy="212" r="8"></circle>
+                <circle id="Oval-Copy-6" fill="#E93323" cx="351" cy="173" r="8"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
