@@ -2,12 +2,19 @@
 import IndexTile from './IndexTile.vue'
 import salesAssistImage from '@/assets/images/call-prep.jpg'
 import essentialsImage from '@/assets/images/resources.jpg'
+import sellImage from '@/assets/images/sell.jpg'
 const tiles = [
     {
         title: 'Sales Assist',
         description: 'Generate a customer tyre status report and view recommendations',
         imgSrc: salesAssistImage,
         routeName: 'salesAssist'
+    },
+    {
+        title: 'Sell Tyres',
+        description: 'Retrieve a historical report or generate a new report',
+        imgSrc: sellImage,
+        routeName: 'sell'
     },
     {
         title: 'Essentials',

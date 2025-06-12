@@ -1,17 +1,11 @@
 <script setup>
-import { inject } from 'vue'
 import validation from 'uk-numberplate-format'
 
-const changeState = inject('changeState')
+const emit = defineEmits(['inputChange'])
 function handleInput({ target }) {
     const value = target.value.trim()
     validation.validate(value, function(err, data) {
-        if (err) {
-            changeState('reg', null)
-            return
-        }
-
-        changeState('reg', value)
+        emit('inputChange', err ? null : value)
     })
 }
 </script>
@@ -28,6 +22,3 @@ function handleInput({ target }) {
     </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>

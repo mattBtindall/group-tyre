@@ -1,5 +1,5 @@
 export default {
-    'slight': {
+    '3mm-2mm': {
         title: "50%-80% worn",
         definitions: [
             'The tyre is displaying slight signs of natural wear and tear'
@@ -15,7 +15,7 @@ export default {
             'Reduces the effectiveness of the job of the tyre to grip the road surface and push any water out from the centre increasing the chance of an accident'
         ]
     },
-    'severe': {
+    '2mm-1.6mm': {
         title: "80%-100% worn",
         definitions: [
             'The tyre is displaying significant signs of natural wear and tear'

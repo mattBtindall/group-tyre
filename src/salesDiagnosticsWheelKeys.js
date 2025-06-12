@@ -1,8 +1,8 @@
 export const carSideIds = {
-    FRONT_PASSENGER_SIDE_ID: 'front_passenger_side',
-    FRONT_DRIVER_SIDE_ID: 'front_driver_side',
-    REAR_PASSENGER_SIDE_ID: 'rear_passenger_side',
-    REAR_DRIVER_SIDE_ID: 'rear_driver_side',
+    FRONT_PASSENGER_SIDE_ID: 'front_passenger',
+    FRONT_DRIVER_SIDE_ID: 'front_driver',
+    REAR_PASSENGER_SIDE_ID: 'rear_passenger',
+    REAR_DRIVER_SIDE_ID: 'rear_driver',
 }
 
 export const carSideTitleMap = {
@@ -15,10 +15,17 @@ export const carSideTitleMap = {
 export const tyreLabelIds = {
     SELECT_ID: "select",
     NONE_ID: "none",
-    SLIGHT_ID: "slight",
-    SEVERE_ID: "severe",
+    SLIGHT_ID: "3mm-2mm",
+    SEVERE_ID: "2mm-1.6mm",
     UNEVEN_ID: "uneven",
     DAMAGED_ID: "damaged"
+}
+
+export const tyreValueMaps = { // sometimes when the data is passed from the backend the values differ
+    'severe': tyreLabelIds.SEVERE_ID,
+    'slight': tyreLabelIds.SLIGHT_ID,
+    'uneven': tyreLabelIds.UNEVEN_ID,
+    'damaged': tyreLabelIds.DAMAGED_ID
 }
 
 export const tyreLabelValueMap = {

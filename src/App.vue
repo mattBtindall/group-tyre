@@ -1,20 +1,16 @@
 <script setup>
-import { onMounted, computed } from 'vue'
+import { onMounted } from 'vue'
 import { RouterView } from 'vue-router'
 import { useColourModeStore } from './stores/ColourModeStore'
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 import VContainer from './components/app/VContainer.vue'
-import { useRoute } from 'vue-router'
 
-const route = useRoute()
 const colourModeStore = useColourModeStore()
 
 onMounted(() => {
     colourModeStore.init()
 })
-
-const showNav = computed(() => route.name === 'salesAssist' || route.name === 'essentials')
 </script>
 
 <template>

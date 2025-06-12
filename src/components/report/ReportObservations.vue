@@ -4,7 +4,9 @@ import { carSideIds } from '../../salesDiagnosticsWheelKeys'
 import reportTypes from '../../ReportTypes'
 import VButton from '../app/VButton.vue'
 import ReportObservation from './ReportObservation.vue'
+import { useRoute } from 'vue-router'
 
+const route = useRoute()
 const props = defineProps({
     car: {
         type: [Object, null],
@@ -25,6 +27,8 @@ const observations = computed(() => {
     }))
     return car.filter(c => c.tyreState !== 'none')
 })
+
+const pdfLink = computed(() => `${import.meta.env.VITE_API_UL}pdf/${route.params.id}`) // can't have the import.meta... in the template
 </script>
 
 <template>
@@ -33,7 +37,7 @@ const observations = computed(() => {
             <h2 class="text-2xl font-bold sm:py-3 mb-4 lg:mb-0">
                 Observations, Causes, Risks & Cost
             </h2>
-            <VButton class="hidden sm:block text-sm bg-red hover:opacity-80 text-white px-4 py-2">
+            <VButton class="hidden sm:block text-sm bg-red hover:opacity-80 text-white px-4 py-2" is-external-link :href="pdfLink">
                 Download PDF
             </VButton>
         </header>
@@ -61,3 +65,4 @@ const observations = computed(() => {
     }
 }
 </style>
+

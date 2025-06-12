@@ -1,13 +1,14 @@
 <script setup>
 import { inject } from 'vue'
 import { useRouter } from 'vue-router'
-import { carSideIds } from '../../salesDiagnosticsWheelKeys'
+import { carSideIds, tyreLabelIds } from '../../salesDiagnosticsWheelKeys'
 import SalesAssistDiagnosticsReg from './SalesAssistDiagnosticsReg.vue'
 import SalesAssistDiagnosticsCar from './SalesAssistDiagnosticsCar.vue'
 import SalesAssistDiagnosticsInputRoot from './SalesAssistDiagnosticsInputRoot.vue'
 import VButton from '../app/VButton.vue'
 
 const inputState = inject('inputState')
+const changeState = inject('changeState')
 const router = useRouter()
 defineProps({
     step: {
@@ -16,16 +17,30 @@ defineProps({
     }
 })
 
-function handleGenerateClick() {
+async function handleGenerateClick() {
+    const strippedNone = Object.fromEntries(Object.entries(inputState.value).filter(([side, damage]) => damage !== tyreLabelIds.NONE_ID))
+    const jsonData = JSON.stringify(strippedNone)
+    const res = await fetch(`${import.meta.env.VITE_API_UL}report`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: jsonData
+    })
+    const { errors, data } = await res.json()
+    if (errors) {
+        console.log(errors)
+    }
+
     // can't seem to pass a POJO through on state
-    router.push({ name: 'report', state: { car: JSON.stringify(inputState.value)} })
+    router.push({ name: 'report', params: { id: data.id }, state: { car: JSON.stringify(inputState.value)}})
 }
 </script>
 
 <template>
     <div class="flex w-full flex-col lg:flex-row justify-around">
         <div class="w-full lg:w-2/5 flex-shrink-0 lg:p-3">
-            <SalesAssistDiagnosticsReg />
+            <SalesAssistDiagnosticsReg @input-change="(value) => changeState('reg', value)" />
             <SalesAssistDiagnosticsInputRoot :id="carSideIds.FRONT_PASSENGER_SIDE_ID" title="Front Passenger Side" :active="step !== 1" />
             <SalesAssistDiagnosticsInputRoot :id="carSideIds.REAR_PASSENGER_SIDE_ID" title="Rear Passenger Side" :active="step !== 1" />
         </div>
