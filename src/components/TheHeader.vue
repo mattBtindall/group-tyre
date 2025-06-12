@@ -20,25 +20,27 @@ const drawerActive = ref(false)
 const colourModeStore = useColourModeStore()
 const route = useRoute()
 const imageAttributes = computed(() => {
+    let src, htmlClass
     switch (route.name) {
         case 'salesAssist':
-            return {
-                src: colourModeStore.colourMode === colourModeIds.DARK_ID ? salesAssistLogoLightImg : salesAssistLogoDarkImg,
-                class: 'w-52'
-            }
+            src = colourModeStore.colourMode === colourModeIds.DARK_ID ? salesAssistLogoLightImg : salesAssistLogoDarkImg
+            htmlClass = 'w-52'
+            break
         case 'essentials':
-            return {
-                src: colourModeStore.colourMode === colourModeIds.DARK_ID ? essentialsLogoLightImg : essentialsLogoDarkImg,
-                class: 'w-44'
-            }
+            src = colourModeStore.colourMode === colourModeIds.DARK_ID ? essentialsLogoLightImg : essentialsLogoDarkImg
+            htmlClass = 'w-44'
+            break
         default:
-            return {
-                src: colourModeStore.colourMode === colourModeIds.DARK_ID ? defaultLogoLightImg : defaultLogoDarkImg,
-                class: 'w-64 py-8 sm:py-0'
-            }
+            src = colourModeStore.colourMode === colourModeIds.DARK_ID ? defaultLogoLightImg : defaultLogoDarkImg
+            htmlClass = 'w-64 py-8 sm:py-0'
+    }
+
+    return {
+        src,
+        class: htmlClass
     }
 })
-const showNav = computed(() => route.name === 'salesAssist' || route.name === 'essentials')
+const showNav = computed(() => route.name === 'salesAssist' || route.name === 'essentials' || route.name === 'sell')
 
 function openDrawerClickHandler() {
     drawerActive.value = true
@@ -76,6 +78,3 @@ function openDrawerClickHandler() {
     </Teleport>
 </template>
 
-<style lang="scss" scoped>
-
-</style>

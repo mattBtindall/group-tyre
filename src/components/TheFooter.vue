@@ -20,6 +20,3 @@ const year = now.getFullYear()
     </footer>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
