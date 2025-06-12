@@ -5,16 +5,17 @@ import VHeader from '../components/app/VHeader.vue'
 import SalesAssistDiagnosticsReg from '../components/sales-assist/SalesAssistDiagnosticsReg.vue'
 import VButton from '../components/app/VButton.vue'
 import SellSection from '../components/sell/SellSection.vue'
+import { useMessageStore } from '../stores/MessageStore'
 import { tyreValueMaps, carSideIds } from '../salesDiagnosticsWheelKeys'
 
+const messageStore = useMessageStore()
 const router = useRouter()
 const reg = ref(null)
 const retrieveReportClickHandler = async () => {
     const res = await fetch(`${import.meta.env.VITE_API_UL}report/search/${reg.value}`)
     let { data: parsedData, message } = await res.json()
     if (message) {
-        // output error here
-        console.log(message)
+        messageStore.addMessage({type: 'error', message})
         return
     }
 

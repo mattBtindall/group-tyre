@@ -5,6 +5,7 @@ import { useColourModeStore } from './stores/ColourModeStore'
 import TheHeader from './components/TheHeader.vue'
 import TheFooter from './components/TheFooter.vue'
 import VContainer from './components/app/VContainer.vue'
+import MessageRoot from './components/messages/MessageRoot.vue'
 
 const colourModeStore = useColourModeStore()
 
@@ -22,6 +23,7 @@ onMounted(() => {
             </div>
         </VContainer>
     </main>
+    <MessageRoot />
     <TheFooter />
 </template>
 

@@ -2,11 +2,13 @@
 import { inject } from 'vue'
 import { useRouter } from 'vue-router'
 import { carSideIds, tyreLabelIds } from '../../salesDiagnosticsWheelKeys'
+import { useMessageStore } from '../../stores/MessageStore'
 import SalesAssistDiagnosticsReg from './SalesAssistDiagnosticsReg.vue'
 import SalesAssistDiagnosticsCar from './SalesAssistDiagnosticsCar.vue'
 import SalesAssistDiagnosticsInputRoot from './SalesAssistDiagnosticsInputRoot.vue'
 import VButton from '../app/VButton.vue'
 
+const messageStore = useMessageStore()
 const inputState = inject('inputState')
 const changeState = inject('changeState')
 const router = useRouter()
@@ -29,6 +31,7 @@ async function handleGenerateClick() {
     })
     const { errors, data } = await res.json()
     if (errors) {
+        messageStore.addMessage({type: 'error', message: 'unable to generate report'}) 
         console.log(errors)
     }
 
